@@ -1,4 +1,4 @@
-<p align="center">
+<!-- <p align="center">
 <a href="https://designrevision.com/downloads/shards-dashboard-lite-react/">
 <img src="assets/preview.png" width="250" />
 </a>
@@ -104,4 +104,4 @@ If you're looking for something more, check out [Shards Dashboard Pro React](htt
 
 ### Changelog
 
-Please check out the [CHANGELOG](CHANGELOG.md).
+Please check out the [CHANGELOG](CHANGELOG.md). -->

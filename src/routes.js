@@ -18,10 +18,10 @@ export default [
     path: "/",
     exact: true,
     layout: DefaultLayout,
-    component: () => <Redirect to="/blog-posts" />
+    component: () => <Redirect to="/things" />
   },
   {
-    path: "/user-profile-lite",
+    path: "/editprofile",
     layout: DefaultLayout,
     component: UserProfileLite
   },
@@ -31,12 +31,7 @@ export default [
     component: AddNewPost
   },
   {
-    path: "/errors",
-    layout: DefaultLayout,
-    component: Errors
-  },
-  {
-    path: "/components-overview",
+    path: "/ex",
     layout: DefaultLayout,
     component: ComponentsOverview
   },
@@ -46,8 +41,13 @@ export default [
     component: Tables
   },
   {
-    path: "/blog-posts",
+    path: "/things",
     layout: DefaultLayout,
     component: BlogPosts
-  }
+  },
+  {
+    path: "/errors",
+    layout: DefaultLayout,
+    component: Errors
+  },
 ];

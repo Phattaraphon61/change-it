@@ -5,10 +5,12 @@ const Errors = () => (
   <Container fluid className="main-content-container px-4 pb-4">
     <div className="error">
       <div className="error__content">
-        <h2>500</h2>
-        <h3>Something went wrong!</h3>
-        <p>There was a problem on our end. Please try again later.</p>
-        <Button pill>&larr; Go Back</Button>
+        <h2>404</h2>
+        <h3>ไม่พบ URL ที่ร้องขอบนเซิร์ฟเวอร์นี้ !</h3>
+        <p>กรุณาตรวจ URL ที่ร้องขอใหม่อีกครั้ง</p>
+        <a href="/" className="text-fiord-blue">
+          <Button pill>&larr;กลับไปหน้าหลัก</Button>
+        </a>
       </div>
     </div>
   </Container>

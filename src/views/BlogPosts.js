@@ -11,6 +11,7 @@ import {
   Badge,
   Button
 } from "shards-react";
+import LinesEllipsis from 'react-lines-ellipsis'
 
 import PageTitle from "../components/common/PageTitle";
 
@@ -22,132 +23,151 @@ class BlogPosts extends React.Component {
       // First list of posts.
       PostsListOne: [
         {
-          backgroundImage: "https://static.naewna.com/uploads/news/source/513640.jpg",
-          category: "Business",
-          categoryTheme: "dark",
-          author: "Anna Kunis",
-          authorAvatar: require("../images/avatars/1.jpg"),
-          title: "Conduct at an replied removal an amongst",
-          body:
-            "However venture pursuit he am mr cordial. Forming musical am hearing studied be luckily. But in for determine what would see...",
-          date: "28 February 2019"
+          backgroundImage: "https://image.dek-d.com/27/0526/1577/120224706",
+          category: "หนังสือ",
+          categoryTheme: "primary",
+          author: "DekShaoKhao ",
+          authorAvatar:
+            "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/117383726_2258739107605477_5898861422442131179_n.jpg?_nc_cat=106&_nc_sid=174925&_nc_ohc=JdzlAiDS-uIAX8WxtkU&_nc_ht=scontent.fbkk14-1.fna&oh=1c174a46de4c54dae823006b6bc628dd&oe=5F929DE2",
+          title: "รวมข้อสอบ GAT PAT1 PAT2 ปี 52",
+          body: "นัดแลกได้ในวาริน ในเมืองหรือส่งไปรษณีย์ทักแชทมาเลยจ้า",
+          date: "อำเภอวารินชำราบ,อุบลราชธานี,ไทย"
         },
         {
-          backgroundImage: require("../images/content-management/2.jpeg"),
-          category: "Travel",
+          backgroundImage:
+            "https://cf.shopee.co.th/file/e0327cba4a5e41a8e405b1fd721a4939",
+          category: "ความงาม",
           categoryTheme: "info",
-          author: "James Jamerson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Off tears are day blind smile alone had ready",
-          body:
-            "Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my...",
-          date: "29 February 2019"
+          author: "Pamnoi",
+          authorAvatar:
+            "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/105574599_951219488637712_5207857927949601256_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=mye7XgGazioAX_hgCk9&_nc_ht=scontent.fbkk14-1.fna&oh=9dccd02698d8d7f2c563969eed1d7b38&oe=5F91D33E",
+          title: "โทนเนอร์พี่จุน ANUA Heartleaf 77% Soothing Toner 250 ML.",
+          body: "พึ่งซื้อมาค่ะ อยากเปลี่ยนเป็นโทนเนอร์ตัวอื่น ขาย 700 บาท ",
+          date: "อำเภอเมืองอุบลราชธานี,อุบลราชธานี,ไทย"
         },
         {
-          backgroundImage: require("../images/content-management/3.jpeg"),
-          category: "Technology",
+          backgroundImage:
+            "https://www.consolethai.com/index.php?attachments/57317/",
+          category: "เกม",
           categoryTheme: "royal-blue",
-          author: "Jimmy Jackson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Difficult in delivered extensive at direction",
+          author: "Yasio Kung",
+          authorAvatar:
+            "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/50327204_2112404578815672_2866495090707136512_o.jpg?_nc_cat=103&_nc_sid=09cbfe&_nc_ohc=Rf7AyoraUi0AX-9EL9M&_nc_ht=scontent.fbkk10-1.fna&oh=e154eca89a9c6bc148854fafec572491&oe=5F91542A",
+          title: "Nintendo switch Neon มือสอง + overcooked",
           body:
-            "Is at purse tried jokes china ready decay an. Small its shy way had woody downs power. To denoting admitted speaking learning my...",
-          date: "29 February 2019"
+            "ไม่ค่อยมีเวลาเล่น เครื่องหิ้วญี่ปุ่น ติดฟิล์มกันรอยแล้วซื้อมาเมื่อต้นเดือน กุมภาพันธ์ 2563 ใช้งานได้ปกติ เครื่องไม่รวน จอยคอนไม่เดินเอง ราคา 8,000 บาท",
+          date: "อำเภอน้ำยืน,อุบลราชธานี,ไทย"
         },
         {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
+          backgroundImage:
+            "https://f.ptcdn.info/774/036/000/nwthfth5yXhNoNsFbD9-o.jpg",
+          category: "มีเดีย",
           categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
+          author: "Fishstop chan",
+          authorAvatar:
+            "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/48382402_1468943199904553_3400320523001921536_n.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=F4xPX5JuvWYAX9-_h7Q&_nc_ht=scontent.fbkk10-1.fna&oh=fc33cbbf976ab5b04ffb3e5e540b294a&oe=5F9387E8",
+          title: "กล้องมือสอง Canon EOS 500D",
           body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
+            "มีแบตของแท้,ที่ชาร์จแบตของแท้,กระเป๋ากล้อง ไม่มีเมมโมรี่ นัดแลกภายในจังหวัดได้",
+          date: "อำเภอม่วงสามสิบ,อุบลราชธานี,ไทย"
         },
         {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
+          backgroundImage: "https://www.bahtsold.com/user_images/2018/07-16/335233/SAM_8857.jpg",
+          category: "ของเล่น",
+          categoryTheme: "dark",
+          author: "น้องป้อน ขยันเรียน",
+          authorAvatar:
+            "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/116786107_3210878469005817_7282993053071591781_o.jpg?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=iWFYBRd34uYAX--gypd&_nc_ht=scontent.fbkk14-1.fna&oh=e9da3f248e6c9940f0d15189d671260b&oe=5F93BD6D",
+          title: "DJL Tello",
           body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
-        },   {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
-          body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
-        },   {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
-          body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
-        },   {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
-          body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
-        },   {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
-          body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
-        },   {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
-          body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
-        },   {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
-          body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
+            "บินได้ปกติไม่ค่อยได้ใช้ครับ มีแบต 2 ก้อน ขาบ 2,500 หรือแลกอะไรก็ได้ เสนอมาดูครับ",
+          date: "อำเภอม่วงสามสิบ,อุบลราชธานี,ไทย"
         },
         {
-          backgroundImage: require("../images/content-management/4.jpeg"),
-          category: "Business",
-          categoryTheme: "warning",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "It so numerous if he may outlived disposal",
+          backgroundImage:
+            "https://www.bangkokaudio.com/topic_file/1_4693673278620171210160306.jpg",
+          category: "เครื่องใช้ไฟฟ้า",
+          categoryTheme: "secondary",
+          author: "Masrider F",
+          authorAvatar:
+            "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/75037933_1739322909538588_7212596295943323648_o.jpg?_nc_cat=107&_nc_sid=09cbfe&_nc_ohc=v11crQWR_KcAX92Jznh&_nc_ht=scontent.fbkk10-1.fna&oh=b01e91e94dcf11a4796d9292f557b97b&oe=5F939C71",
+          title: "ลำโพง monitor audio studio2",
           body:
-            "How but sons mrs lady when. Her especially are unpleasant out alteration continuing unreserved ready road market resolution...",
-          date: "29 February 2019"
+            "สภาพดี ไม่แน่ใจว่าเป็นตัว SE หรือเปล่า มีรอยที่มุมบนเล็กๆ 1 จุด ตอนยกเข้ากล่องไปโดนมุมโต๊ะครับ",
+          date: "อำเภอเขมราฐ,อุบลราชธานี,ไทย"
+        },
+        {
+          backgroundImage:
+            "https://cf.shopee.co.th/file/08563af9a81dce7772ef7f1529216b9d",
+          category: "แฟชั่นชาย",
+          categoryTheme: "info",
+          author: "Master TripperA",
+          authorAvatar:
+            "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/44153215_2169162796666553_8155936573465034752_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=N3tQ-JiNNAsAX-ox5P-&_nc_ht=scontent.fbkk14-1.fna&oh=4e62423e55b38047f39991be955b0775&oe=5F940C51",
+          title: "รองเท้า Nike Air Max 98",
+          body: "ซื้อได้แค่เดือนเดียว ใส่สองครั้ง แลกกับ nike air รุ่นอื่นครับ",
+          date: "อำเภอนาจะลวย,อุบลราชธานี,ไทย"
+        },
+        {
+          backgroundImage: "https://df.lnwfile.com/1jgi8r.jpg",
+          category: "อุปกรณ์อิเล็กทรอนิกส์",
+          categoryTheme: "success",
+          author: "คุณชาย เย็นชา",
+          authorAvatar:
+            "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/29432419_1597505513663656_5321652397448101888_o.jpg?_nc_cat=102&_nc_sid=09cbfe&_nc_ohc=qH2I8LapcT8AX_Cozio&_nc_ht=scontent.fbkk10-1.fna&oh=4a9630b7579dfbd0d2f27325710b2fb1&oe=5F93F1C8",
+          title: "SK Hynix 16 GB DDR4-2133 มือสอง",
+          body:
+            "ขายแรมสำหรับโน๊ตบุ๊ค ขนาด 16GB 1 แผง Hynix SK Hynix 16 กิกะไบต์ 1Rx8 PC4- DDR4-2133 ประกันของ SK Hynix เป็นแบบ L/T 3,000 บาท",
+          date: "อำเภอตระการพืชผล,อุบลราชธานี,ไทย"
+        },
+        {
+          backgroundImage:
+            "https://byoursignature.files.wordpress.com/2016/04/e0b894e0b8b5e0b984e0b88be0b899e0b98ce0b881e0b8a3e0b8b0e0b980e0b89be0b98be0b8b2e0b8a1e0b8b7e0b8ade0b8aae0b8ade0b8871.jpg",
+          category: "แฟชั่นผู้หญิง",
+          categoryTheme: "warning",
+          author: "องค์หญิงน้อย ของคุณแม่",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title: "กระเป๋า Gucci แท้จาก shop",
+          body:
+            "กระเป๋าถือ สภาพ เหมือนใหม่ ใช้งานน้อย มาก มีสายสะพาย พร้อมถุงผ้า 19,500 บาท",
+          date: "อำเภอวารินชำราบ,อุบลราชธานี,ไทย"
+        },
+        {
+          backgroundImage: "https://img.kaidee.com/prd/20181011/342319848/b/09943fea-4cf7-48e5-a48d-f07fd1135db2.jpg",
+          category: "บ้านและสวน",
+          categoryTheme: "warning",
+          author: "สุดยอดแห่งความดี ในตัวคุณ",
+          authorAvatar:
+            "https://images.workpointnews.com/workpointnews/2020/09/01123946/1598938782_66119_web.jpg",
+          title: "หม้อหุงข้าวไฟฟ้า 1.8 ลิตร",
+          body: "ขอแลกกับหม้อขนาด 1 ลิตรครับ",
+          date: "อำเภอโขงเจียม,อุบลราชธานี,ไทย"
+        },
+        {
+          backgroundImage:
+            "https://img.kaidee.com/prd/20180524/338513519/b/c94b9979-7b7e-4164-8d40-1c6818d83558.jpg",
+          category: "กลางแจ้ง",
+          categoryTheme: "dark",
+          author: "Weeraphon Jongphakdee",
+          authorAvatar: "https://avatarfiles.alphacoders.com/174/174790.png",
+          title: "เบ็ดตกปลาพร้อมรอกเหมารวม",
+          body:
+            "คันสปืน 9 ฟุต 2 คัน คันสปิน 5.6 ฟุตพร้อมรอก 1 คัน คันเบทใหม่ 6 ฟุต 1 คัน รอก เบอร์ 5000 1 ตัว รอก เบอร์ 3000 1 ตัว 1,200 บาท มารับเองนะครับ",
+          date: "อำเภอพิบูลมังสาหาร,อุบลราชธานี,ไทย"
+        },
+        {
+          backgroundImage:
+            "https://i.pinimg.com/originals/11/e5/50/11e5505b08be9b75ae0fea982f48bf6e.jpg",
+          category: "ฟิตเนส",
+          categoryTheme: "info",
+          author: "นายน่ะ ก็สามารถเป็นนายกได้นะ",
+          authorAvatar:
+            "https://img.kaidee.com/prd/20180116/334687243/b/421d89f0-df2e-40cb-9e7f-b7dc2daea7ae.jpg",
+          title: "ลูกบาสเก็ตบอล",
+          body: "มีลอยถลอกนิดหน่อย แลกอะไรก็ได้ที่ราคาพอๆกันประมาณ 300 บาท",
+          date: "อำเภอเดชอุดม,อุบลราชธานี,ไทย"
         }
-      ],
+      ]
 
       // Second list of posts.
       // PostsListTwo: [
@@ -268,7 +288,12 @@ class BlogPosts extends React.Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Blog Posts" subtitle="Components" className="text-sm-left" />
+          <PageTitle
+            sm="4"
+            title="สิ่งของทั้งหมด"
+            // subtitle="Components"
+            className="text-xs-left"
+          />
         </Row>
 
         {/* First Row of Posts */}
@@ -296,14 +321,24 @@ class BlogPosts extends React.Component {
                     </a>
                   </div>
                 </div>
-                <CardBody>
-                  <h5 className="card-title">
-                    <a href="#" className="text-fiord-blue">
+                <CardBody >
+
+                  <h5 className="card-title col-15 text-truncate">
+
+                    <a href="#" className="text-fiord-blue ">
                       {post.title}
                     </a>
+
                   </h5>
-                  <p className="card-text d-inline-block mb-3">{post.body}</p>
-                  <span className="text-muted">{post.date}</span>
+                  <LinesEllipsis
+                    text={post.body}
+                    maxLine='0'
+                  />
+                  <LinesEllipsis
+                    text={post.date}
+                    maxLine='1'
+                    className="text-muted"
+                  />
                 </CardBody>
               </Card>
             </Col>

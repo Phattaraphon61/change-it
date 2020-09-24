@@ -7,9 +7,9 @@ export default function() {
     //   htmlAfter: ""
     // },
     {
-      title: "Blog Posts",
-      htmlBefore: '<i class="material-icons">vertical_split</i>',
-      to: "/blog-posts",
+      title: "สิ่งของทั้งหมด",
+      htmlBefore: '<i class="material-icons">shopping_basket</i>',
+      to: "/things",
     },
     // {
     //   title: "Add New Post",
@@ -17,24 +17,24 @@ export default function() {
     //   to: "/add-new-post",
     // },
     {
-      title: "Forms & Components",
+      title: "ตัวอย่าง",
       htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/components-overview",
+      to: "/ex",
     },
     {
-      title: "Tables",
+      title: "ตัวอย่างตาราง",
       htmlBefore: '<i class="material-icons">table_chart</i>',
       to: "/tables",
     },
     {
-      title: "User Profile",
+      title: "แก้ไขประวัติส่วนตัว",
       htmlBefore: '<i class="material-icons">person</i>',
-      to: "/user-profile-lite",
+      to: "/editprofile",
     },
-    {
-      title: "Errors",
-      htmlBefore: '<i class="material-icons">error</i>',
-      to: "/errors",
-    }
+    // {
+    //   title: "Errors",
+    //   htmlBefore: '<i class="material-icons">error</i>',
+    //   to: "/errors",
+    // }
   ];
 }
