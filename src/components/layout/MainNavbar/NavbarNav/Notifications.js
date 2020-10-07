@@ -20,15 +20,15 @@ export default class Notifications extends React.Component {
 
   render() {
     return (
-      <NavItem className="border-right dropdown notifications">
+      <NavItem className="border-right dropdown notifications" style={{cursor: "pointer"}}>
         <NavLink
           className="nav-link-icon text-center"
           onClick={this.toggleNotifications}
         >
           <div className="nav-link-icon__wrapper">
-            <i className="material-icons">&#xE7F4;</i>
+            <i className="material-icons" >&#xE7F4;</i>
             <Badge pill theme="danger">
-              2
+              1
             </Badge>
           </div>
         </NavLink>
@@ -51,7 +51,7 @@ export default class Notifications extends React.Component {
               </p>
             </div>
           </DropdownItem>
-          <DropdownItem>
+          {/* <DropdownItem>
             <div className="notification__icon-wrapper">
               <div className="notification__icon">
                 <i className="material-icons">&#xE8D1;</i>
@@ -65,7 +65,7 @@ export default class Notifications extends React.Component {
                 could have been worse!
               </p>
             </div>
-          </DropdownItem>
+          </DropdownItem> */}
           <DropdownItem className="notification__all text-center">
             View all Notifications
           </DropdownItem>

@@ -1,6 +1,6 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
-import React from "react";
+import React,{useState} from "react";
 import {
   Container,
   Row,
@@ -11,8 +11,8 @@ import {
   Badge,
   Button
 } from "shards-react";
-import LinesEllipsis from 'react-lines-ellipsis'
-
+// import LinesEllipsis from 'react-lines-ellipsis'
+// import Dialog from "./dialog"
 import PageTitle from "../components/common/PageTitle";
 
 class BlogPosts extends React.Component {
@@ -31,7 +31,8 @@ class BlogPosts extends React.Component {
             "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/117383726_2258739107605477_5898861422442131179_n.jpg?_nc_cat=106&_nc_sid=174925&_nc_ohc=JdzlAiDS-uIAX8WxtkU&_nc_ht=scontent.fbkk14-1.fna&oh=1c174a46de4c54dae823006b6bc628dd&oe=5F929DE2",
           title: "รวมข้อสอบ GAT PAT1 PAT2 ปี 52",
           body: "นัดแลกได้ในวาริน ในเมืองหรือส่งไปรษณีย์ทักแชทมาเลยจ้า",
-          date: "อำเภอวารินชำราบ,อุบลราชธานี,ไทย"
+          date: "อำเภอวารินชำราบ,อุบลราชธานี,ไทย",
+          id: "1"
         },
         {
           backgroundImage:
@@ -43,7 +44,8 @@ class BlogPosts extends React.Component {
             "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/105574599_951219488637712_5207857927949601256_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=mye7XgGazioAX_hgCk9&_nc_ht=scontent.fbkk14-1.fna&oh=9dccd02698d8d7f2c563969eed1d7b38&oe=5F91D33E",
           title: "โทนเนอร์พี่จุน ANUA Heartleaf 77% Soothing Toner 250 ML.",
           body: "พึ่งซื้อมาค่ะ อยากเปลี่ยนเป็นโทนเนอร์ตัวอื่น ขาย 700 บาท ",
-          date: "อำเภอเมืองอุบลราชธานี,อุบลราชธานี,ไทย"
+          date: "อำเภอเมืองอุบลราชธานี,อุบลราชธานี,ไทย",
+          id: "2"
         },
         {
           backgroundImage:
@@ -56,7 +58,8 @@ class BlogPosts extends React.Component {
           title: "Nintendo switch Neon มือสอง + overcooked",
           body:
             "ไม่ค่อยมีเวลาเล่น เครื่องหิ้วญี่ปุ่น ติดฟิล์มกันรอยแล้วซื้อมาเมื่อต้นเดือน กุมภาพันธ์ 2563 ใช้งานได้ปกติ เครื่องไม่รวน จอยคอนไม่เดินเอง ราคา 8,000 บาท",
-          date: "อำเภอน้ำยืน,อุบลราชธานี,ไทย"
+          date: "อำเภอน้ำยืน,อุบลราชธานี,ไทย",
+          id: "3"
         },
         {
           backgroundImage:
@@ -69,7 +72,8 @@ class BlogPosts extends React.Component {
           title: "กล้องมือสอง Canon EOS 500D",
           body:
             "มีแบตของแท้,ที่ชาร์จแบตของแท้,กระเป๋ากล้อง ไม่มีเมมโมรี่ นัดแลกภายในจังหวัดได้",
-          date: "อำเภอม่วงสามสิบ,อุบลราชธานี,ไทย"
+          date: "อำเภอม่วงสามสิบ,อุบลราชธานี,ไทย",
+          id: "4"
         },
         {
           backgroundImage: "https://www.bahtsold.com/user_images/2018/07-16/335233/SAM_8857.jpg",
@@ -81,7 +85,8 @@ class BlogPosts extends React.Component {
           title: "DJL Tello",
           body:
             "บินได้ปกติไม่ค่อยได้ใช้ครับ มีแบต 2 ก้อน ขาบ 2,500 หรือแลกอะไรก็ได้ เสนอมาดูครับ",
-          date: "อำเภอม่วงสามสิบ,อุบลราชธานี,ไทย"
+          date: "อำเภอม่วงสามสิบ,อุบลราชธานี,ไทย",
+          id: "5"
         },
         {
           backgroundImage:
@@ -94,7 +99,8 @@ class BlogPosts extends React.Component {
           title: "ลำโพง monitor audio studio2",
           body:
             "สภาพดี ไม่แน่ใจว่าเป็นตัว SE หรือเปล่า มีรอยที่มุมบนเล็กๆ 1 จุด ตอนยกเข้ากล่องไปโดนมุมโต๊ะครับ",
-          date: "อำเภอเขมราฐ,อุบลราชธานี,ไทย"
+          date: "อำเภอเขมราฐ,อุบลราชธานี,ไทย",
+          id: "6"
         },
         {
           backgroundImage:
@@ -106,7 +112,8 @@ class BlogPosts extends React.Component {
             "https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/44153215_2169162796666553_8155936573465034752_o.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=N3tQ-JiNNAsAX-ox5P-&_nc_ht=scontent.fbkk14-1.fna&oh=4e62423e55b38047f39991be955b0775&oe=5F940C51",
           title: "รองเท้า Nike Air Max 98",
           body: "ซื้อได้แค่เดือนเดียว ใส่สองครั้ง แลกกับ nike air รุ่นอื่นครับ",
-          date: "อำเภอนาจะลวย,อุบลราชธานี,ไทย"
+          date: "อำเภอนาจะลวย,อุบลราชธานี,ไทย",
+          id: "7"
         },
         {
           backgroundImage: "https://df.lnwfile.com/1jgi8r.jpg",
@@ -118,7 +125,8 @@ class BlogPosts extends React.Component {
           title: "SK Hynix 16 GB DDR4-2133 มือสอง",
           body:
             "ขายแรมสำหรับโน๊ตบุ๊ค ขนาด 16GB 1 แผง Hynix SK Hynix 16 กิกะไบต์ 1Rx8 PC4- DDR4-2133 ประกันของ SK Hynix เป็นแบบ L/T 3,000 บาท",
-          date: "อำเภอตระการพืชผล,อุบลราชธานี,ไทย"
+          date: "อำเภอตระการพืชผล,อุบลราชธานี,ไทย",
+          id: "8"
         },
         {
           backgroundImage:
@@ -130,7 +138,8 @@ class BlogPosts extends React.Component {
           title: "กระเป๋า Gucci แท้จาก shop",
           body:
             "กระเป๋าถือ สภาพ เหมือนใหม่ ใช้งานน้อย มาก มีสายสะพาย พร้อมถุงผ้า 19,500 บาท",
-          date: "อำเภอวารินชำราบ,อุบลราชธานี,ไทย"
+          date: "อำเภอวารินชำราบ,อุบลราชธานี,ไทย",
+          id: "9"
         },
         {
           backgroundImage: "https://img.kaidee.com/prd/20181011/342319848/b/09943fea-4cf7-48e5-a48d-f07fd1135db2.jpg",
@@ -141,7 +150,8 @@ class BlogPosts extends React.Component {
             "https://images.workpointnews.com/workpointnews/2020/09/01123946/1598938782_66119_web.jpg",
           title: "หม้อหุงข้าวไฟฟ้า 1.8 ลิตร",
           body: "ขอแลกกับหม้อขนาด 1 ลิตรครับ",
-          date: "อำเภอโขงเจียม,อุบลราชธานี,ไทย"
+          date: "อำเภอโขงเจียม,อุบลราชธานี,ไทย",
+          id: "10"
         },
         {
           backgroundImage:
@@ -153,7 +163,8 @@ class BlogPosts extends React.Component {
           title: "เบ็ดตกปลาพร้อมรอกเหมารวม",
           body:
             "คันสปืน 9 ฟุต 2 คัน คันสปิน 5.6 ฟุตพร้อมรอก 1 คัน คันเบทใหม่ 6 ฟุต 1 คัน รอก เบอร์ 5000 1 ตัว รอก เบอร์ 3000 1 ตัว 1,200 บาท มารับเองนะครับ",
-          date: "อำเภอพิบูลมังสาหาร,อุบลราชธานี,ไทย"
+          date: "อำเภอพิบูลมังสาหาร,อุบลราชธานี,ไทย",
+          id: "11"
         },
         {
           backgroundImage:
@@ -165,7 +176,8 @@ class BlogPosts extends React.Component {
             "https://img.kaidee.com/prd/20180116/334687243/b/421d89f0-df2e-40cb-9e7f-b7dc2daea7ae.jpg",
           title: "ลูกบาสเก็ตบอล",
           body: "มีลอยถลอกนิดหน่อย แลกอะไรก็ได้ที่ราคาพอๆกันประมาณ 300 บาท",
-          date: "อำเภอเดชอุดม,อุบลราชธานี,ไทย"
+          date: "อำเภอเดชอุดม,อุบลราชธานี,ไทย",
+          id: "12"
         }
       ]
 
@@ -277,15 +289,22 @@ class BlogPosts extends React.Component {
   }
 
   render() {
+    // const [open, setOpen] = useState(true);
     const {
       PostsListOne,
       PostsListTwo,
       PostsListThree,
       PostsListFour
+
     } = this.state;
+    // let numdialog = false;
+    // const handleClick = (n) => {
+    //   console.log("dssfsfsf", open);
+    //   numdialog = true;
+    // }
 
     return (
-      <Container fluid className="main-content-container px-4">
+      <Container fluid className="main-content-container px-4" >
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
           <PageTitle
@@ -295,27 +314,33 @@ class BlogPosts extends React.Component {
             className="text-xs-left"
           />
         </Row>
-
+        {/* {numdialog ? <Dialog/>:null} */}
+        {/* <Dialog /> */}
         {/* First Row of Posts */}
-        <Row>
+        <Row >
+
           {PostsListOne.map((post, idx) => (
-            <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>
-              <Card small className="card-post card-post--1">
+            <Col lg="3" md="6" sm="12" className="mb-4" style={{ cursor: "pointer" }} key={idx}  >
+            {/* <a href={`things/${post.id}`} style={{textDecoration:"none"}}> */}
+              <Card small className="card-post card-post--1"  >
                 <div
                   className="card-post__image"
                   style={{ backgroundImage: `url(${post.backgroundImage})` }}
+
                 >
                   <Badge
                     pill
                     className={`card-post__category bg-${post.categoryTheme}`}
+
                   >
                     {post.category}
                   </Badge>
-                  <div className="card-post__author d-flex">
+                  <div className="card-post__author d-flex"    >
                     <a
-                      href="#"
+                      href={`${idx}`}
                       className="card-post__author-avatar card-post__author-avatar--small"
                       style={{ backgroundImage: `url('${post.authorAvatar}')` }}
+
                     >
                       Written by {post.author}
                     </a>
@@ -325,12 +350,12 @@ class BlogPosts extends React.Component {
 
                   <h5 className="card-title col-15 text-truncate">
 
-                    <a href="#" className="text-fiord-blue ">
+                    <a href={`things/${post.id}`} className="text-fiord-blue ">
                       {post.title}
                     </a>
 
                   </h5>
-                  <LinesEllipsis
+                  {/* <LinesEllipsis
                     text={post.body}
                     maxLine='0'
                   />
@@ -338,10 +363,12 @@ class BlogPosts extends React.Component {
                     text={post.date}
                     maxLine='1'
                     className="text-muted"
-                  />
+                  /> */}
                 </CardBody>
               </Card>
+              {/* </a> */}
             </Col>
+
           ))}
         </Row>
 

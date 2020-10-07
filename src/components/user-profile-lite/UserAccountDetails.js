@@ -28,7 +28,7 @@ const UserAccountDetails = ({ title }) => (
               <Row form>
                 {/* First Name */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="feFirstName">First Name</label>
+                  <label htmlFor="feFirstName">ชื่อ</label>
                   <FormInput
                     id="feFirstName"
                     placeholder="First Name"
@@ -38,7 +38,7 @@ const UserAccountDetails = ({ title }) => (
                 </Col>
                 {/* Last Name */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="feLastName">Last Name</label>
+                  <label htmlFor="feLastName">นามสกุล</label>
                   <FormInput
                     id="feLastName"
                     placeholder="Last Name"
@@ -50,7 +50,7 @@ const UserAccountDetails = ({ title }) => (
               <Row form>
                 {/* Email */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="feEmail">Email</label>
+                  <label htmlFor="feEmail">อีเมล</label>
                   <FormInput
                     type="email"
                     id="feEmail"
@@ -62,7 +62,7 @@ const UserAccountDetails = ({ title }) => (
                 </Col>
                 {/* Password */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="fePassword">Password</label>
+                  <label htmlFor="fePassword">รหัสผ่าน</label>
                   <FormInput
                     type="password"
                     id="fePassword"
@@ -74,7 +74,7 @@ const UserAccountDetails = ({ title }) => (
                 </Col>
               </Row>
               <FormGroup>
-                <label htmlFor="feAddress">Address</label>
+                <label htmlFor="feAddress">ที่อยู่</label>
                 <FormInput
                   id="feAddress"
                   placeholder="Address"
@@ -85,7 +85,7 @@ const UserAccountDetails = ({ title }) => (
               <Row form>
                 {/* City */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="feCity">City</label>
+                  <label htmlFor="feCity">จังหวัด</label>
                   <FormInput
                     id="feCity"
                     placeholder="City"
@@ -93,29 +93,29 @@ const UserAccountDetails = ({ title }) => (
                   />
                 </Col>
                 {/* State */}
-                <Col md="4" className="form-group">
-                  <label htmlFor="feInputState">State</label>
+                {/* <Col md="4" className="form-group">
+                  <label htmlFor="feInputState"></label>
                   <FormSelect id="feInputState">
                     <option>Choose...</option>
                     <option>...</option>
                   </FormSelect>
-                </Col>
+                </Col> */}
                 {/* Zip Code */}
-                <Col md="2" className="form-group">
+                {/* <Col md="2" className="form-group">
                   <label htmlFor="feZipCode">Zip</label>
                   <FormInput
                     id="feZipCode"
                     placeholder="Zip"
                     onChange={() => {}}
                   />
-                </Col>
+                </Col> */}
               </Row>
               <Row form>
                 {/* Description */}
-                <Col md="12" className="form-group">
+                {/* <Col md="12" className="form-group">
                   <label htmlFor="feDescription">Description</label>
                   <FormTextarea id="feDescription" rows="5" />
-                </Col>
+                </Col> */}
               </Row>
               <Button theme="accent">Update Account</Button>
             </Form>
@@ -134,7 +134,7 @@ UserAccountDetails.propTypes = {
 };
 
 UserAccountDetails.defaultProps = {
-  title: "Account Details"
+  title: "ข้อมูลส่วนตัว"
 };
 
 export default UserAccountDetails;

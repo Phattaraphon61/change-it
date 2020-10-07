@@ -1,8 +1,10 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+
 
 // Layout Types
 import { DefaultLayout } from "./layouts";
+import Test from './layouts/Test/Test'
 
 // Route Views
 import BlogOverview from "./views/BlogOverview";
@@ -12,42 +14,111 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
+import Singin from "./views/Sigin"
+import Chat from "./views/Chat"
+import Dialog from "./views/dialog"
 
 export default [
-  {
-    path: "/",
-    exact: true,
-    layout: DefaultLayout,
-    component: () => <Redirect to="/things" />
-  },
-  {
-    path: "/editprofile",
-    layout: DefaultLayout,
-    component: UserProfileLite
-  },
-  {
-    path: "/add-new-post",
-    layout: DefaultLayout,
-    component: AddNewPost
-  },
-  {
-    path: "/ex",
-    layout: DefaultLayout,
-    component: ComponentsOverview
-  },
-  {
-    path: "/tables",
-    layout: DefaultLayout,
-    component: Tables
-  },
-  {
-    path: "/things",
-    layout: DefaultLayout,
-    component: BlogPosts
-  },
-  {
-    path: "/errors",
-    layout: DefaultLayout,
-    component: Errors
-  },
-];
+
+  <BrowserRouter>
+    <Switch>
+    <Route path="/editprofile">
+        <DefaultLayout>
+          <UserProfileLite />
+        </DefaultLayout>
+      </Route>
+      <Route path="/singin">
+        <DefaultLayout>
+          <Dialog />
+        </DefaultLayout>
+      </Route>
+
+      <Route path="/things">
+        <DefaultLayout>
+          <BlogPosts />
+        </DefaultLayout>
+      </Route>
+      <Route path="/chat/:id/">
+        <DefaultLayout>
+          <Chat />
+        </DefaultLayout>
+        {/* <Redirect to="chat/:id"/> */}
+      </Route>
+      <Route path="/chat">
+      <DefaultLayout>
+        <Chat />
+        </DefaultLayout>
+      </Route>
+      <Route path="/">
+        <Redirect to="/things" />
+      </Route>
+      {/* <Route from="*">
+        <Errors />
+      </Route> */}
+    </Switch>
+  </BrowserRouter>
+]
+
+// export default [
+//   // {
+//   //   path :'/404' ,
+//   //   layout:Test,
+//   //   component: Errors
+
+//   // },
+//   // {
+//   //   from : '*',
+//   //   layout:Test,
+//   //   component: () => <Redirect to="/404"/>
+
+//   // },
+//   // {
+//   //   path: "/",
+//   //   exact: true,
+//   //   layout: DefaultLayout,
+//   //   component: () => <Redirect to="/things" />
+//   // },
+//   // {
+//   //   path: "/editprofile",
+//   //   layout: DefaultLayout,
+//   //   component: UserProfileLite
+//   // },
+//   // {
+//   //   path: "/add-new-post",
+//   //   layout: DefaultLayout,
+//   //   component: AddNewPost
+//   // },
+//   // {
+//   //   path: "/ex",
+//   //   layout: DefaultLayout,
+//   //   component: ComponentsOverview
+//   // },
+//   // {
+//   //   path: "/tables",
+//   //   layout: DefaultLayout,
+//   //   component: Tables
+//   // },
+//   // {
+//   //   path: "/things",
+//   //   layout: DefaultLayout,
+//   //   component: BlogPosts
+//   // },
+//   // {
+//   //   path: "/singin",
+//   //   layout: Test,
+//   //   component: Singin
+//   // },
+//   // {
+//   //   path: "/chat/:id",
+//   //   layout: DefaultLayout,
+//   //   component: Chat
+//   // },
+//   //   {
+//   //   path: "/chat",
+//   //   layout: DefaultLayout,
+//   //   component: Chat
+
+//   // },
+
+
+// ];

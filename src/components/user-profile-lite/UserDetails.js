@@ -6,7 +6,8 @@ import {
   Button,
   ListGroup,
   ListGroupItem,
-  Progress
+  Progress,
+  Badge
 } from "shards-react";
 
 const UserDetails = ({ userDetails }) => (
@@ -14,19 +15,24 @@ const UserDetails = ({ userDetails }) => (
     <CardHeader className="border-bottom text-center">
       <div className="mb-3 mx-auto">
         <img
-          className="rounded-circle"
+        style={{width:"145px",height: "140px"}}
+          className="rounded-circle file-loading"
           src={userDetails.avatar}
           alt={userDetails.name}
           width="110"
         />
+        {/* <Badge >
+          1
+        </Badge> */}
+
       </div>
-      <h4 className="mb-0">{userDetails.name}</h4>
-      <span className="text-muted d-block mb-2">{userDetails.jobTitle}</span>
-      <Button pill outline size="sm" className="mb-2">
+      <h4 className="mb-5">{userDetails.name}</h4>
+      {/* <span className="text-muted d-block mb-2">{userDetails.jobTitle}</span> */}
+      {/* <Button pill outline size="sm" className="mb-2">
         <i className="material-icons mr-1">person_add</i> Follow
-      </Button>
+      </Button> */}
     </CardHeader>
-    <ListGroup flush>
+    {/* <ListGroup flush>
       <ListGroupItem className="px-4">
         <div className="progress-wrapper">
           <strong className="text-muted d-block mb-2">
@@ -48,7 +54,7 @@ const UserDetails = ({ userDetails }) => (
         </strong>
         <span>{userDetails.metaValue}</span>
       </ListGroupItem>
-    </ListGroup>
+    </ListGroup> */}
   </Card>
 );
 
@@ -62,7 +68,7 @@ UserDetails.propTypes = {
 UserDetails.defaultProps = {
   userDetails: {
     name: "Sierra Brooks",
-    avatar: require("./../../images/avatars/0.jpg"),
+    avatar: "https://s.isanook.com/wo/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3dvLzAvdWQvMjcvMTM1NTY5L2wxLmpwZw==.jpg",
     jobTitle: "Project Manager",
     performanceReportTitle: "Workload",
     performanceReportValue: 74,

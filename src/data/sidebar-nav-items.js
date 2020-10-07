@@ -16,20 +16,30 @@ export default function() {
     //   htmlBefore: '<i class="material-icons">note_add</i>',
     //   to: "/add-new-post",
     // },
-    {
-      title: "ตัวอย่าง",
-      htmlBefore: '<i class="material-icons">view_module</i>',
-      to: "/ex",
-    },
-    {
-      title: "ตัวอย่างตาราง",
-      htmlBefore: '<i class="material-icons">table_chart</i>',
-      to: "/tables",
-    },
+    // {
+    //   title: "ตัวอย่าง",
+    //   htmlBefore: '<i class="material-icons">view_module</i>',
+    //   to: "/ex",
+    // },
+    // {
+    //   title: "ตัวอย่างตาราง",
+    //   htmlBefore: '<i class="material-icons">table_chart</i>',
+    //   to: "/tables",
+    // },
     {
       title: "แก้ไขประวัติส่วนตัว",
       htmlBefore: '<i class="material-icons">person</i>',
       to: "/editprofile",
+    },
+    {
+      title: "แชท",
+      htmlBefore: '<i class="material-icons">chat</i>',
+      to: "/chat",
+    },
+    {
+      title: "ออกจากระบบ",
+      htmlBefore: '<i class="material-icons">login</i>',
+      to: "singin",
     },
     // {
     //   title: "Errors",
