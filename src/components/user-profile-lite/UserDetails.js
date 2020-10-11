@@ -9,8 +9,10 @@ import {
   Progress,
   Badge
 } from "shards-react";
+import jwt_decode from "jwt-decode";
 
 const UserDetails = ({ userDetails }) => (
+
   <Card small className="mb-4 pt-3">
     <CardHeader className="border-bottom text-center">
       <div className="mb-3 mx-auto">
@@ -18,7 +20,6 @@ const UserDetails = ({ userDetails }) => (
         style={{width:"145px",height: "140px"}}
           className="rounded-circle file-loading"
           src={userDetails.avatar}
-          alt={userDetails.name}
           width="110"
         />
         {/* <Badge >
@@ -64,10 +65,12 @@ UserDetails.propTypes = {
    */
   userDetails: PropTypes.object
 };
-
+const token = localStorage.usertoken;
+const decoded = jwt_decode(token);
 UserDetails.defaultProps = {
+
   userDetails: {
-    name: "Sierra Brooks",
+    name: decoded.name,
     avatar: "https://s.isanook.com/wo/0/rp/r/w728/ya0xa0m1w0/aHR0cHM6Ly9zLmlzYW5vb2suY29tL3dvLzAvdWQvMjcvMTM1NTY5L2wxLmpwZw==.jpg",
     jobTitle: "Project Manager",
     performanceReportTitle: "Workload",

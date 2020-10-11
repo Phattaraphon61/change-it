@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {
   Card,
@@ -14,11 +14,21 @@ import {
   FormTextarea,
   Button
 } from "shards-react";
+import jwt_decode from "jwt-decode";
 
-const UserAccountDetails = ({ title }) => (
-  <Card small className="mb-4">
+export default function UserAccountDetails() {
+  const token = localStorage.usertoken;
+  const decoded = jwt_decode(token);
+  const [name, setname] = useState(decoded.name)
+  const [lastname, setlastname] = useState(decoded.lname)
+  const [email, setemail] = useState(decoded.email)
+  const [password, setpassword] = useState()
+  const [address, setaddress] = useState(decoded.address)
+  const [city, setcity] = useState(decoded.city)
+  return (
+<Card small className="mb-4">
     <CardHeader className="border-bottom">
-      <h6 className="m-0">{title}</h6>
+      <h6 className="m-0">{"ข้อมูลส่วนตัว"}</h6>
     </CardHeader>
     <ListGroup flush>
       <ListGroupItem className="p-3">
@@ -32,8 +42,8 @@ const UserAccountDetails = ({ title }) => (
                   <FormInput
                     id="feFirstName"
                     placeholder="First Name"
-                    value="Sierra"
-                    onChange={() => {}}
+                    value={name}
+                    onChange={(e) => {setname(e.target.value)}}
                   />
                 </Col>
                 {/* Last Name */}
@@ -42,8 +52,8 @@ const UserAccountDetails = ({ title }) => (
                   <FormInput
                     id="feLastName"
                     placeholder="Last Name"
-                    value="Brooks"
-                    onChange={() => {}}
+                    value={lastname}
+                    onChange={(e) => {setlastname(e.target.value)}}
                   />
                 </Col>
               </Row>
@@ -55,8 +65,8 @@ const UserAccountDetails = ({ title }) => (
                     type="email"
                     id="feEmail"
                     placeholder="Email Address"
-                    value="sierra@example.com"
-                    onChange={() => {}}
+                    value={email}
+                    onChange={(e) => {setemail(e.target.value)}}
                     autoComplete="email"
                   />
                 </Col>
@@ -67,8 +77,8 @@ const UserAccountDetails = ({ title }) => (
                     type="password"
                     id="fePassword"
                     placeholder="Password"
-                    value="EX@MPL#P@$$w0RD"
-                    onChange={() => {}}
+                    value={password}
+                    onChange={(e) => {setpassword(e.target.value)}}
                     autoComplete="current-password"
                   />
                 </Col>
@@ -78,8 +88,8 @@ const UserAccountDetails = ({ title }) => (
                 <FormInput
                   id="feAddress"
                   placeholder="Address"
-                  value="1234 Main St."
-                  onChange={() => {}}
+                  value={address}
+                  onChange={(e) => {setaddress(e.target.value)}}
                 />
               </FormGroup>
               <Row form>
@@ -89,7 +99,8 @@ const UserAccountDetails = ({ title }) => (
                   <FormInput
                     id="feCity"
                     placeholder="City"
-                    onChange={() => {}}
+                    value={city}
+                    onChange={(e) => {setcity(e.target.value)}}
                   />
                 </Col>
                 {/* State */}
@@ -124,17 +135,5 @@ const UserAccountDetails = ({ title }) => (
       </ListGroupItem>
     </ListGroup>
   </Card>
-);
-
-UserAccountDetails.propTypes = {
-  /**
-   * The component's title.
-   */
-  title: PropTypes.string
-};
-
-UserAccountDetails.defaultProps = {
-  title: "ข้อมูลส่วนตัว"
-};
-
-export default UserAccountDetails;
+  )
+}

@@ -328,6 +328,7 @@ class BlogPosts extends React.Component {
                   style={{ backgroundImage: `url(${post.backgroundImage})` }}
 
                 >
+
                   <Badge
                     pill
                     className={`card-post__category bg-${post.categoryTheme}`}

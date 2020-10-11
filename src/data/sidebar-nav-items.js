@@ -11,6 +11,11 @@ export default function() {
       htmlBefore: '<i class="material-icons">shopping_basket</i>',
       to: "/things",
     },
+    {
+      title: "เพิ่มสิ่งของ",
+      htmlBefore: '<i class="material-icons">add_circle_outline</i>',
+      to: "/addproduct",
+    },
     // {
     //   title: "Add New Post",
     //   htmlBefore: '<i class="material-icons">note_add</i>',

@@ -14,9 +14,10 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
-import Singin from "./views/Sigin"
+import Signin from "./views/Signin"
 import Chat from "./views/Chat"
 import Dialog from "./views/dialog"
+import Addproduct from "./views/Addproduct"
 
 export default [
 
@@ -28,9 +29,9 @@ export default [
         </DefaultLayout>
       </Route>
       <Route path="/singin">
-        <DefaultLayout>
-          <Dialog />
-        </DefaultLayout>
+        <Test>
+          <Signin />
+        </Test>
       </Route>
 
       <Route path="/things">
@@ -38,16 +39,21 @@ export default [
           <BlogPosts />
         </DefaultLayout>
       </Route>
-      <Route path="/chat/:id/">
+      <Route path="/addproduct">
         <DefaultLayout>
-          <Chat />
+          <Addproduct />
         </DefaultLayout>
-        {/* <Redirect to="chat/:id"/> */}
       </Route>
       <Route path="/chat">
       <DefaultLayout>
         <Chat />
         </DefaultLayout>
+      </Route>
+      <Route exact path="/chat/:id">
+        <DefaultLayout>
+          <Chat />
+        </DefaultLayout>
+        {/* <Redirect to="chat/:id"/> */}
       </Route>
       <Route path="/">
         <Redirect to="/things" />
